@@ -15,7 +15,7 @@ def index():
     if request.method == 'POST':
         name = request.form.get('name', 'Guest')
         ip
-_address = get_container_ip()
+        _address = get_container_ip()
         greeting = f"Hello {name}, I am greeting you from a Python container with IP address {ip_address}"
         return render_template('index.html', greeting=greeting)
     return render_template('index.html', greeting=None)
